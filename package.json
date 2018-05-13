@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "coffee-script": "^1.12.7",
-    "gapi": "0.0.3",
     "googleapis": "^30.0.0"
   }
 }
