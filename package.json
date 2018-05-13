@@ -14,7 +14,5 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-
-    "googleapis": "^30.0.0"
   }
 }
