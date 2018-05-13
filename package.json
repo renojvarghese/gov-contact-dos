@@ -14,7 +14,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "coffee-script": "^1.12.7",
+
     "googleapis": "^30.0.0"
   }
 }
