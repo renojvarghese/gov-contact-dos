@@ -19,7 +19,6 @@ export class SearchForm extends Component {
     loadgapi() {
         const script = document.createElement("script");
         script.src = "https://apis.google.com/js/client.js";
-
         script.onload = () => {
             let gapi = window.gapi;
             gapi.load('client', () => {
@@ -29,17 +28,15 @@ export class SearchForm extends Component {
                 gapiReady: true,
                 gapi: gapi
             });
-            this.searchByAddress("", this.readRes);
+
           });
         };
 
         document.body.appendChild(script);
     }
     readRes(res, raw) {
-        console.log(res);
-        this.setState({
-            res: res
-        });
+        
+        this.props.handleData(res);
     }
     searchByAddress(address, callback) {
         let gapi = this.state.gapi;
@@ -47,7 +44,7 @@ export class SearchForm extends Component {
            'path' : '/civicinfo/v2/representatives',
            'params' : {'address' : address}
         });
-        req.execute(this.readRes);
+        req.execute(callback);
     }
 
     componentDidMount() {
@@ -66,7 +63,7 @@ export class SearchForm extends Component {
         return (
             <div>
                 <h1>Hello</h1>
-
+                this.searchByAddress("", this.readRes);
             </div>
         );
     }

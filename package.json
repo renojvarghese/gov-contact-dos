@@ -5,12 +5,21 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "chroma-js": "^1.2.2",
+    "prop-types": "^15.5.8",
+    "react-sketchapp": "^2.0.0",
+    "react-test-renderer": "^15.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sketch-build": "skpm-build",
+    "sketch-watch": "skpm-build --watch",
+    "sketch-render": "skpm-build --watch --run",
+    "sketch-render:once": "skpm-build --run",
+    "sketch-postinstall": "npm run build && skpm-link"
   }
 }
