@@ -7,12 +7,26 @@ export class ResultsContainer extends Component {
         super(props);
     }
     get officialData() {
+        let rendered;
+        let { divisions, offices, officials } = this.state;
+        for (let key in divisions) {
+            let division = division[key];
 
+        }
+        return (
+            <div>
+            {rendered}
+            </div>
+        )
     }
     render() {
-
+        if (!this.props.shouldRender) {
+            return (<div className="official-container empty"></div>);
+        }
         return (
-            <div>HELLO</div>
+            <div className="official-container">
+                {this.officialData}
+            </div>
             );
     }
 }

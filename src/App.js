@@ -32,6 +32,7 @@ class App extends Component {
             divisions={data ? data.divsions : null}
             offices={data ? data.offices : null}
             officials={data ? data.officials : null}
+            shouldRender={data ? true : false}
             />
       </div>
     );
