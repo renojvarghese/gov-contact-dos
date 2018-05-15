@@ -12,7 +12,6 @@ class App extends Component {
       }
   }
   getData(res) {
-      console.log(res);
       this.setState({
           res: res
       });
@@ -27,7 +26,7 @@ class App extends Component {
             <p className="app-desc">app desc TBD</p>
         </header>
         <SearchForm handleData={this.getData}/>
-        <Results data=this.state.res/>
+        <ResultsContainer data={this.state.res}/>
       </div>
     );
   }

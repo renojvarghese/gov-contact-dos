@@ -8,10 +8,10 @@ export class Results extends Component {
         const officials = this.props.data.officials;
         const offices = this.props.data.offices;
         return offices.map(office => {
-            
+            return "";
         })
     }
     render() {
-
+        return <div></div>
     }
 }

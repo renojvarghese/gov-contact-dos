@@ -6,6 +6,9 @@ export class ResultsContainer extends Component {
         super(props)
     }
     render() {
-
+        console.log(this.props.data);
+        return (
+            <div>HELLO</div>
+            );
     }
 }

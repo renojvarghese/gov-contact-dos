@@ -14,6 +14,7 @@ export class SearchForm extends Component {
         this.loadgapi = this.loadgapi.bind(this);
         this.readRes = this.readRes.bind(this);
         this.searchByAddress = this.searchByAddress.bind(this);
+        this.handleSearch = this.handleSearch.bind(this);
     }
 
     loadgapi() {
@@ -35,7 +36,6 @@ export class SearchForm extends Component {
         document.body.appendChild(script);
     }
     readRes(res, raw) {
-        
         this.props.handleData(res);
     }
     searchByAddress(address, callback) {
@@ -46,24 +46,24 @@ export class SearchForm extends Component {
         });
         req.execute(callback);
     }
-
+    handleSearch(e) {
+        e.preventDefault();
+        const query = document.getElementById('search').value;
+        this.searchByAddress(query, this.readRes)
+    }
     componentDidMount() {
         this.loadgapi();
 
     }
-    get data() {
-        if (!this.state.res)
-            return "none";
-        let data = this.state.res;
-        return data.map(item => {
-            return <div>item.toString()</div>;
-        })
-    }
+
     render() {
         return (
             <div>
                 <h1>Hello</h1>
-                this.searchByAddress("", this.readRes);
+                <form className="search-form" onSubmit={this.handleSearch}>
+                <input type="text" name="query" className="search-input" id="search"></input>
+                <button type="submit" className="submit-btn" >Submit</button>
+                </form>
             </div>
         );
     }
