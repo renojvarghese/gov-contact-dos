@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
 
 export class Results extends Component {
     constructor(props) {
