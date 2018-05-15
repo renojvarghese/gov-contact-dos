@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
-import { Results } from './Results';
+import PropTypes from 'prop-types';
+// import { Results } from './Results';
 
 export class ResultsContainer extends Component {
     constructor(props) {
-        super(props)
+        super(props);
+    }
+    get officialData() {
+
     }
     render() {
-        console.log(this.props.data);
+
         return (
             <div>HELLO</div>
             );
     }
+}
+
+ResultsContainer.propTypes = {
+    address: PropTypes.object,
+    divisions: PropTypes.object,
+    offices: PropTypes.array,
+    officials: PropTypes.array
 }

@@ -1,17 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export class Results extends Component {
     constructor(props) {
-        super(props)
-    }
-    get results() {
-        const officials = this.props.data.officials;
-        const offices = this.props.data.offices;
-        return offices.map(office => {
-            return "";
-        })
+        super(props);
+        const official = this.props.official;
     }
     render() {
-        return <div></div>
+        return <div>{JSON.stringify(this.props.official, null, 2)}</div>
     }
+}
+Results.propTypes = {
+    official: PropTypes.object
 }
