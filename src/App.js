@@ -20,6 +20,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <header className="app-header">
+            <h1 className="app-title">
+                App Name TBD
+            </h1>
+            <p className="app-desc">app desc TBD</p>
+        </header>
         <SearchForm handleData={this.getData}/>
         <Results data=this.state.res/>
       </div>
