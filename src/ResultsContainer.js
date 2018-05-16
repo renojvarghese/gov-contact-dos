@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Office } from './Office';
-
+// import { Office } from './Office';
+import { Official } from './Official';
 export class ResultsContainer extends Component {
     constructor(props) {
         super(props);
     }
     get officialData() {
 
-        this.props.offices.map( (office, i) => {
-            <Office office={office}
-                officials={this.props.officials}/>
+        return this.props.offices.map( (office, i) => {
+            return office.officialIndices.map( (index, j) => {
+                return <Official key={"official_" + i + "_" + j}
+                        position={office.name}
+                        official={this.props.officials[index]}/>
+            }
+
+            )
         });
 
     }

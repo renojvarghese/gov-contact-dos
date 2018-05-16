@@ -34,11 +34,11 @@ class App extends Component {
         </header>
         <SearchForm handleData={this.getData}/>
         {data? <ResultsContainer
-            address={data ? data.normalizedInput : null}
-            divisions={data ? data.divsions : null}
-            offices={data ? data.offices : null}
-            officials={data ? data.officials : null}
-            shouldRender={data ? true : false}
+            address={data.normalizedInput}
+            divisions={data.divsions}
+            offices={data.offices}
+            officials={data.officials}
+
             />: <div></div>}
       </div>
     );

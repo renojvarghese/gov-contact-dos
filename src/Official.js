@@ -6,7 +6,7 @@ export class Official extends Component {
         super(props);
     }
     render() {
-        return <div>{JSON.stringify(this.props.official, null, 2)}</div>
+        return <div>{this.props.position}: {JSON.stringify(this.props.official, null, 2)}</div>
     }
 }
 Official.propTypes = {
