@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Results } from './Results';
+import { Office } from './Office';
 
 export class ResultsContainer extends Component {
     constructor(props) {
         super(props);
     }
     get officialData() {
-        let rendered;
-        let { divisions, offices, officials } = this.state;
-        for (let key in divisions) {
-            let division = division[key];
 
-        }
-        return (
-            <div>
-            {rendered}
-            </div>
-        )
+        this.props.offices.map( (office, i) => {
+            <Office office={office}
+                officials={this.props.officials}/>
+        });
+
     }
     render() {
-        if (!this.props.shouldRender) {
-            return (<div className="official-container empty"></div>);
-        }
+
         return (
             <div className="official-container">
                 {this.officialData}

@@ -8,16 +8,35 @@ class App extends Component {
       super(props);
       this.getData = this.getData.bind(this);
       this.state = {
-          res: null
+          res: null,
+          error: false
       }
   }
   getData(res) {
+      if (res.error) {
+          return this.setState({
+              error: true
+          })
+      }
+
       this.setState({
           res: res
       });
   }
   render() {
-      const data = this.state.res;
+    const data = this.state.res;
+    let results;
+    if (data) {
+        console.log(results);
+        results = <ResultsContainer
+            address={data ? data.normalizedInput : null}
+            divisions={data ? data.divsions : null}
+            offices={data ? data.offices : null}
+            officials={data ? data.officials : null}
+            shouldRender={data ? true : false}
+            />;
+    }
+
     return (
       <div className="App">
         <header className="app-header">
@@ -27,14 +46,8 @@ class App extends Component {
             <p className="app-desc">app desc TBD</p>
         </header>
         <SearchForm handleData={this.getData}/>
-        <ResultsContainer
-            address={data ? data.normalizedInput : null}
-            divisions={data ? data.divsions : null}
-            offices={data ? data.offices : null}
-            officials={data ? data.officials : null}
-            shouldRender={data ? true : false}
-            />
-      </div>
+        {data? results: null}
+    </div>
     );
   }
 }
