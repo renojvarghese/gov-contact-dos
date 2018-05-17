@@ -12,11 +12,13 @@ export class SearchFormContainer extends Component {
         this.state = {
             gapiReady: false,
             gapi: null,
+            query: null,
             res: null
         }
         this.loadgapi = this.loadgapi.bind(this);
         this.readRes = this.readRes.bind(this);
         this.searchByAddress = this.searchByAddress.bind(this);
+        this.handleChange= this.handleChange.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
     }
 
@@ -49,10 +51,15 @@ export class SearchFormContainer extends Component {
         });
         req.execute(callback);
     }
+    handleChange(e) {
+        this.setState({
+            query: e.target.value
+        })
+    }
     handleSearch(e) {
+        console.log(e);
         e.preventDefault();
-        const query = document.getElementById('search').value;
-        this.searchByAddress(query, this.readRes)
+        this.searchByAddress(this.state.query, this.readRes)
     }
     componentDidMount() {
         this.loadgapi();
@@ -61,7 +68,7 @@ export class SearchFormContainer extends Component {
     render() {
         return (
             <div className="search-form-container">
-                <SearchForm handleSubmit={this.handleSearch} />
+                <SearchForm query={this.state.query} handleChange={this.handleChange} handleSubmit={this.handleSearch} />
             </div>
         )
     }
