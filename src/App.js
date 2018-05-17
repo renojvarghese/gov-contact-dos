@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { SearchForm } from './SearchForm';
+import { SearchFormContainer } from './SearchFormContainer';
 import { ResultsContainer } from './ResultsContainer';
 
 class App extends Component {
@@ -32,10 +32,10 @@ class App extends Component {
             </h1>
             <p className="app-desc">app desc TBD</p>
         </header>
-        <SearchForm handleData={this.getData}/>
+        <SearchFormContainer handleData={this.getData}/>
         {data? <ResultsContainer
             address={data.normalizedInput}
-            divisions={data.divsions}
+            divisions={data.divisions}
             offices={data.offices}
             officials={data.officials}
 
