@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { SearchFormContainer } from './SearchFormContainer';
-import { ResultsContainer } from './ResultsContainer';
+import { OfficialsContainer } from './OfficialsContainer';
 
 class App extends Component {
   constructor(props) {

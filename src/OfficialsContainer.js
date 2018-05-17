@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Official } from './Official';
 
-export class ResultsContainer extends Component {
+export class OffcialsContainer extends Component {
     constructor(props) {
         super(props);
     }
@@ -29,7 +29,7 @@ export class ResultsContainer extends Component {
     }
 }
 
-ResultsContainer.propTypes = {
+OfficialsContainer.propTypes = {
     address: PropTypes.object.isRequired,
     divisions: PropTypes.object.isRequired,
     offices: PropTypes.array.isRequired,
