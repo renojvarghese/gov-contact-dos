@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import { Office } from './Office';
 import { Official } from './Official';
+
 export class ResultsContainer extends Component {
     constructor(props) {
         super(props);
@@ -30,8 +30,8 @@ export class ResultsContainer extends Component {
 }
 
 ResultsContainer.propTypes = {
-    address: PropTypes.object,
-    divisions: PropTypes.object,
-    offices: PropTypes.array,
-    officials: PropTypes.array
+    address: PropTypes.object.isRequired,
+    divisions: PropTypes.object.isRequired,
+    offices: PropTypes.array.isRequired,
+    officials: PropTypes.array.isRequired
 }
