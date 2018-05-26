@@ -30,9 +30,13 @@ class App extends Component {
           <h1 className="app-title">App Name TBD</h1>
           <p className="app-desc">app desc TBD</p>
         </header>
-        <SearchFormContainer handleData={this.getData} />
+        <SearchFormContainer
+          store={this.props.store}
+          handleData={this.getData}
+        />
         {data ? (
           <OfficialsContainer
+            store={this.props.store}
             address={data.normalizedInput}
             divisions={data.divisions}
             offices={data.offices}

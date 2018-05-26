@@ -4,10 +4,10 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { store } from './reducers';
+
 const render = () => {
-  ReactDOM.render(<App />, document.getElementById('root'));
+  ReactDOM.render(<App store={store} />, document.getElementById('root'));
 };
 store.subscribe(render);
 render();
-console.log(store.getState());
 registerServiceWorker();

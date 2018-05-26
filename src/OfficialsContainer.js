@@ -6,6 +6,11 @@ export class OfficialsContainer extends Component {
   constructor(props) {
     super(props);
   }
+  componentDidMount() {
+    this.unsubscribe = this.props.store.subscribe(() => {
+      this.forceUpdate();
+    });
+  }
   get officialData() {
     return this.props.offices.map((office, i) => {
       return office.officialIndices.map((index, j) => {
@@ -20,6 +25,7 @@ export class OfficialsContainer extends Component {
     });
   }
   render() {
+    console.log(this.props.store.getState());
     return <div className="official-container">{this.officialData}</div>;
   }
 }
