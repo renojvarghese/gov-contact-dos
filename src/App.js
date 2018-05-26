@@ -12,14 +12,20 @@ class App extends Component {
       error: false
     };
   }
+  componentDidMount() {
+    this.unsubscribe = this.props.store.subscribe(() => {
+      this.forceUpdate();
+    });
+  }
   getData(res) {
     if (res.error) {
       return this.setState({
         error: true
       });
     }
-    this.setState({
-      res: res
+    this.props.store.dispatch({
+      type: 'NEW_STATE',
+      data: res
     });
   }
   render() {

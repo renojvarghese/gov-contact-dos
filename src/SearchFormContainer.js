@@ -42,11 +42,7 @@ export class SearchFormContainer extends Component {
     document.body.appendChild(script);
   }
   readRes(res, raw) {
-    // this.props.handleData(res);
-    this.props.store.dispatch({
-      type: 'NEW_STATE',
-      data: res
-    });
+    this.props.handleData(res);
   }
   searchByAddress(address, callback) {
     let gapi = this.state.gapi;
