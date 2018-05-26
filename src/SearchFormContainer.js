@@ -65,7 +65,6 @@ export class SearchFormContainer extends Component {
     this.loadgapi();
   }
   render() {
-    console.log(this.props.store.getState());
     return (
       <div className="search-form-container">
         <SearchForm

@@ -27,6 +27,9 @@ class App extends Component {
       type: 'NEW_STATE',
       data: res
     });
+    this.setState({
+      data: true
+    });
   }
   render() {
     const data = this.state.res;
