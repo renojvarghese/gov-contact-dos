@@ -3,7 +3,7 @@ import { createStore } from 'redux';
 const reducer = (state = {}, action) => {
   switch (action.type) {
     case 'NEW_STATE':
-      return createOfficerArray(data);
+      return createOfficerArray(action.data);
     default:
       return state;
   }
