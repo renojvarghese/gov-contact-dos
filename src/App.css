@@ -23,6 +23,19 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.img-container {
+  max-width: 100px;
+  max-height: 100px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+img {
+  width: 100%;
 }

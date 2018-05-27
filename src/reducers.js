@@ -10,6 +10,7 @@ const reducer = (state = {}, action) => {
 };
 
 const createOfficerArray = data => {
+  console.log(data);
   let offices = data.offices;
   if (!offices) return {};
   let officials = [];
