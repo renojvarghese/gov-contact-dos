@@ -12,15 +12,17 @@ const reducer = (state = {}, action) => {
 const createOfficerArray = data => {
   let offices = data.offices;
   if (!offices) return {};
-  return offices.map(office => {
+  let officials = [];
+  offices.map(office => {
     return office.officialIndices.map(officialIndex => {
       let myofficial = {
         ...data.officials[officialIndex],
         officeName: office.name
       };
-      return myofficial;
+      officials.push(myofficial);
     });
   });
+  return officials;
 };
 
 export const store = createStore(reducer);

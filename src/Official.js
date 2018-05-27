@@ -10,6 +10,5 @@ export class Official extends Component {
   }
 }
 Official.propTypes = {
-  position: PropTypes.string.isRequired,
   official: PropTypes.object.isRequired
 };
