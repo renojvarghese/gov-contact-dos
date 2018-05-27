@@ -8,16 +8,8 @@ export class OfficialsContainer extends Component {
   }
 
   get officialData() {
-    return this.props.offices.map((office, i) => {
-      return office.officialIndices.map((index, j) => {
-        return (
-          <Official
-            key={'official_' + i + '_' + j}
-            position={office.name}
-            official={this.props.officials[index]}
-          />
-        );
-      });
+    return this.props.store.getState().map((official, index) => {
+      return <Official key={'official_' + index} official={official} />;
     });
   }
   render() {
@@ -25,10 +17,10 @@ export class OfficialsContainer extends Component {
     return <div className="official-container">{this.officialData}</div>;
   }
 }
-
-OfficialsContainer.propTypes = {
-  address: PropTypes.object.isRequired,
-  divisions: PropTypes.object.isRequired,
-  offices: PropTypes.array.isRequired,
-  officials: PropTypes.array.isRequired
-};
+//
+// OfficialsContainer.propTypes = {
+//   address: PropTypes.object.isRequired,
+//   divisions: PropTypes.object.isRequired,
+//   offices: PropTypes.array.isRequired,
+//   officials: PropTypes.array.isRequired
+// };

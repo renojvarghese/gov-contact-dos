@@ -13,11 +13,12 @@ const createOfficerArray = data => {
   let offices = data.offices;
   if (!offices) return {};
   return offices.map(office => {
-    return office.officialIndices.map(official => {
-      return {
-        official,
+    return office.officialIndices.map(officialIndex => {
+      let myofficial = {
+        ...data.officials[officialIndex],
         officeName: office.name
       };
+      return myofficial;
     });
   });
 };

@@ -43,17 +43,8 @@ class App extends Component {
           store={this.props.store}
           handleData={this.getData}
         />
-        {data ? (
-          <OfficialsContainer
-            store={this.props.store}
-            address={data.normalizedInput}
-            divisions={data.divisions}
-            offices={data.offices}
-            officials={data.officials}
-          />
-        ) : (
-          <div />
-        )}
+
+        {this.state.data ? <OfficialsContainer store={this.props.store} /> : ''}
       </div>
     );
   }
