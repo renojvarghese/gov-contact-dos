@@ -30,11 +30,32 @@
     transform: rotate(360deg);
   }
 }
+.officials-container {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+.card-container {
+  text-align: center;
+  width: 320px;
+  margin: 10px 30px;
+  background: #f5f5f5;
+  padding: 40px 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
 .img-container {
   max-width: 100px;
   max-height: 100px;
   overflow: hidden;
   border-radius: 100%;
+  border: 5px solid gray;
+  margin: 0 auto;
+}
+.republican .img-container {
+  border-color: red;
+}
+.democrat .img-container {
+  border-color: blue;
 }
 img {
   width: 100%;

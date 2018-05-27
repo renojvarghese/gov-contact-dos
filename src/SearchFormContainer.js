@@ -50,7 +50,7 @@ export class SearchFormContainer extends Component {
       path: '/civicinfo/v2/representatives',
       params: {
         address: address,
-        levels: 'administrativeArea1'
+        roles: 'deputyHeadOfGovernment'
       }
     });
     req.execute(callback);

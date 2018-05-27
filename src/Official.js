@@ -6,16 +6,23 @@ export class Official extends Component {
     super(props);
   }
   render() {
+    const official = this.props.official;
     return (
-      <div>
+      <div
+        className={
+          'card-container ' +
+          (official.party === 'Republican'
+            ? 'republican'
+            : official.party === 'Democratic'
+              ? 'democrat'
+              : '')
+        }
+      >
         <div className="img-container">
           <img src={this.props.official.photoUrl} />
         </div>
         <div className="name">{this.props.official.name}</div>
         <div className="office-name">{this.props.official.officeName}</div>
-        {
-          // {JSON.stringify(this.props.official, null, 2)}}
-        }
       </div>
     );
   }

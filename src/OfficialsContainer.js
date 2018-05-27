@@ -14,7 +14,7 @@ export class OfficialsContainer extends Component {
   }
   render() {
     console.log(this.props.store.getState());
-    return <div className="official-container">{this.officialData}</div>;
+    return <div className="officials-container">{this.officialData}</div>;
   }
 }
 //
