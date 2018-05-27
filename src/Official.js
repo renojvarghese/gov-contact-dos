@@ -8,12 +8,14 @@ export class Official extends Component {
   render() {
     return (
       <div>
-        <div class="img-container">
+        <div className="img-container">
           <img src={this.props.official.photoUrl} />
         </div>
-        <div class="name">{this.props.official.name}</div>
-        <div class="office-name">{this.props.official.officeName}</div>
-        // {JSON.stringify(this.props.official, null, 2)}
+        <div className="name">{this.props.official.name}</div>
+        <div className="office-name">{this.props.official.officeName}</div>
+        {
+          // {JSON.stringify(this.props.official, null, 2)}}
+        }
       </div>
     );
   }
