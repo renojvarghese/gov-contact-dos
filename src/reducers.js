@@ -1,6 +1,4 @@
-import { createStore } from 'redux';
-
-const reducer = (state = {}, action) => {
+export const reducer = (state = {}, action) => {
   switch (action.type) {
     case 'NEW_STATE':
       return createOfficerArray(action.data);
@@ -25,5 +23,3 @@ const createOfficerArray = data => {
   });
   return officials;
 };
-
-export const store = createStore(reducer);

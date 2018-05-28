@@ -3,10 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { store } from './reducers';
+import { reducer } from './reducers';
+import { Provider } from 'react-redux';
+
+Provider.childContextTypes = {
+  store: React.PropTypes.object
+};
 
 const render = () => {
-  ReactDOM.render(<App store={store} />, document.getElementById('root'));
+  ReactDOM.render(
+    <Provider store={createStore(reducer)}>
+      <App />
+    </Provider>,
+    document.getElementById('root')
+  );
 };
 store.subscribe(render);
 render();
