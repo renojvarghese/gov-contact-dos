@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { SearchFormContainer } from './SearchFormContainer';
 import { OfficialsContainer } from './OfficialsContainer';
-
+import { PropTypes } from 'prop-types';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,7 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    this.unsubscribe = this.props.store.subscribe(() => {
+    this.unsubscribe = this.context.store.subscribe(() => {
       this.forceUpdate();
     });
   }
@@ -23,7 +23,7 @@ class App extends Component {
         error: true
       });
     }
-    this.props.store.dispatch({
+    this.context.store.dispatch({
       type: 'NEW_STATE',
       data: res
     });
@@ -49,5 +49,7 @@ class App extends Component {
     );
   }
 }
-
+App.contextTypes = {
+  store: PropTypes.object
+};
 export default App;

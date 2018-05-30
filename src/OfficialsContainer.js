@@ -8,15 +8,18 @@ export class OfficialsContainer extends Component {
   }
 
   get officialData() {
-    return this.props.store.getState().map((official, index) => {
+    return this.context.store.getState().map((official, index) => {
       return <Official key={'official_' + index} official={official} />;
     });
   }
   render() {
-    console.log(this.props.store.getState());
     return <div className="officials-container">{this.officialData}</div>;
   }
 }
+
+OfficialsContainer.contextTypes = {
+  store: PropTypes.object
+};
 //
 // OfficialsContainer.propTypes = {
 //   address: PropTypes.object.isRequired,
