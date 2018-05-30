@@ -36,6 +36,16 @@ export class Official extends Component {
         </div>
         <div className="name">{this.props.official.name}</div>
         <div className="office-name">{this.props.official.officeName}</div>
+        {this.props.official.emails
+          ? this.props.official.emails.map(email => {
+              return <div className="email">{email}</div>;
+            })
+          : ''}
+        {this.props.official.phones
+          ? this.props.official.phones.map(phone => {
+              return <div className="phone">{phone}</div>;
+            })
+          : ''}
       </div>
     );
   }
