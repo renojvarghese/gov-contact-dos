@@ -49,8 +49,7 @@ export class SearchFormContainer extends Component {
     let req = gapi.client.request({
       path: '/civicinfo/v2/representatives',
       params: {
-        address: address,
-        roles: 'deputyHeadOfGovernment'
+        address: address
       }
     });
     req.execute(callback);

@@ -1,12 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700|Roboto');
+#app {
+  font-family: 'Roboto', sans-serif;
+}
+.name {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin: 20px 0px 10px;
+}
+.office-name {
+  font-family: 'Roboto', sans-serif;
+}
 .officials-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
   margin-top: 75px;
 }
 .card-container {
   text-align: center;
-  width: 320px;
+  min-height: 210px;
+  vertical-align: middle;
+  width: 240px;
   margin: 10px 30px;
   background: #f5f5f5;
   padding: 40px 20px;
@@ -14,17 +29,24 @@
 }
 .img-container {
   max-width: 100px;
-  max-height: 100px;
+  height: 100px;
   overflow: hidden;
   border-radius: 100%;
   border: 5px solid gray;
   margin: 0 auto;
+  transition: all 0.5s ease;
 }
 .republican .img-container {
   border-color: red;
 }
 .democrat .img-container {
   border-color: blue;
+}
+.img-container.loading {
+  opacity: 0;
+}
+.img-container.loaded {
+  opecity: 1;
 }
 img {
   width: 100%;

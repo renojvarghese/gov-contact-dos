@@ -4,6 +4,15 @@ import PropTypes from 'prop-types';
 export class Official extends Component {
   constructor(props) {
     super(props);
+    this.state = { imageStatus: 'loading' };
+  }
+
+  handleImageLoaded() {
+    this.setState({ imageStatus: 'loaded' });
+  }
+
+  handleImageErrored() {
+    this.setState({ imageStatus: 'failed to load' });
   }
   render() {
     const official = this.props.official;
@@ -18,8 +27,12 @@ export class Official extends Component {
               : '')
         }
       >
-        <div className="img-container">
-          <img src={this.props.official.photoUrl} />
+        <div className={'img-container ' + this.state.imageStatus}>
+          <img
+            src={this.props.official.photoUrl}
+            onLoad={this.handleImageLoaded.bind(this)}
+            onError={this.handleImageErrored.bind(this)}
+          />
         </div>
         <div className="name">{this.props.official.name}</div>
         <div className="office-name">{this.props.official.officeName}</div>
