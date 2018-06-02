@@ -48,13 +48,22 @@
   padding: 40px 20px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
-.img-container {
+.portrait-container {
   max-width: 100px;
   height: 100px;
   overflow: hidden;
   border-radius: 100%;
-  border: 5px solid gray;
   margin: 0 auto;
+  position: relative;
+  background: url('img/empty.svg');
+}
+.republican .portrait-container {
+  background: url('img/star-red.svg');
+}
+.democrat .portrait-container {
+  background: url('img/star-blue.svg');
+}
+.img-container {
   transition: all 0.5s ease;
 }
 .republican .img-container {
@@ -67,8 +76,9 @@
   opacity: 0;
 }
 .img-container.loaded {
-  opecity: 1;
+  opacity: 1;
 }
+
 img {
   width: 100%;
 }

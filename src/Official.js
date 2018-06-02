@@ -27,12 +27,14 @@ export class Official extends Component {
               : '')
         }
       >
-        <div className={'img-container ' + this.state.imageStatus}>
-          <img
-            src={this.props.official.photoUrl}
-            onLoad={this.handleImageLoaded.bind(this)}
-            onError={this.handleImageErrored.bind(this)}
-          />
+        <div className="portrait-container">
+          <div className={'img-container ' + this.state.imageStatus}>
+            <img
+              src={this.props.official.photoUrl}
+              onLoad={this.handleImageLoaded.bind(this)}
+              onError={this.handleImageErrored.bind(this)}
+            />
+          </div>
         </div>
         <div className="name">{this.props.official.name}</div>
         <div className="office-name">{this.props.official.officeName}</div>
