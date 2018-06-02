@@ -21,5 +21,5 @@ const createOfficerArray = data => {
       officials.push(myofficial);
     });
   });
-  return officials;
+  return officials.slice(2);
 };

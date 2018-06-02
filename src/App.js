@@ -44,11 +44,10 @@ class App extends Component {
             <img src="img/logo.svg" alt="gov-contact logo" />
           </div>
         </header>
-        <SearchFormContainer
-          store={this.props.store}
-          handleData={this.getData}
-        />
 
+        <div className="search-section">
+          <SearchFormContainer handleData={this.getData} />
+        </div>
         {this.state.data ? <OfficialsContainer store={this.props.store} /> : ''}
       </div>
     );
