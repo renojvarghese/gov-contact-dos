@@ -3,6 +3,7 @@ import './App.css';
 import { SearchFormContainer } from './SearchFormContainer';
 import { OfficialsContainer } from './OfficialsContainer';
 import { PropTypes } from 'prop-types';
+// import { logo } from './img/logo.svg';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -37,7 +38,11 @@ class App extends Component {
       <div className="App">
         <header className="app-header">
           <h1 className="app-title">App Name TBD</h1>
+
           <p className="app-desc">app desc TBD</p>
+          <div className="img-container logo-img">
+            <img src="img/logo.svg" alt="gov-contact logo" />
+          </div>
         </header>
         <SearchFormContainer
           store={this.props.store}
