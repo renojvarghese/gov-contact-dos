@@ -69,6 +69,9 @@ export class SearchFormContainer extends Component {
   render() {
     return (
       <div className="search-form-container">
+        <div className="search-form-instruction">
+          <h2 class="search-form-heading">Find Your Representatives</h2>
+        </div>
         <SearchForm
           query={this.state.query}
           handleChange={this.handleChange}

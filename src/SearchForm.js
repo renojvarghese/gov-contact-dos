@@ -9,6 +9,7 @@ export class SearchForm extends Component {
             type="text"
             onChange={this.props.handleChange}
             name="query"
+            placeholder="Enter your address"
             className="search-input"
             id="search"
           />

@@ -35,19 +35,18 @@ class App extends Component {
   render() {
     const data = this.state.res;
     return (
-      <div className="App">
+      <div className="app">
         <header className="app-header">
           <h1 className="app-title">App Name TBD</h1>
 
           <p className="app-desc">app desc TBD</p>
           <div className="img-container logo-img">
-            <img src="img/logo.svg" alt="gov-contact logo" />
+            <img className="pop-up" src="img/logo.svg" alt="gov-contact logo" />
           </div>
         </header>
 
-        <div className="search-section">
-          <SearchFormContainer handleData={this.getData} />
-        </div>
+        <SearchFormContainer handleData={this.getData} />
+
         {this.state.data ? <OfficialsContainer store={this.props.store} /> : ''}
       </div>
     );
