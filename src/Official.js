@@ -19,7 +19,7 @@ export class Official extends Component {
     return (
       <div
         className={
-          'card-container ' +
+          'card-container pop-up ' +
           (official.party === 'Republican'
             ? 'republican'
             : official.party === 'Democratic'
