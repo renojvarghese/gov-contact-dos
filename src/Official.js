@@ -42,14 +42,20 @@ export class Official extends Component {
           ? this.props.official.emails.map(email => {
               return (
                 <div className="email">
-                  <a href={'mailto:' + email}>{email}</a>
+                  <a className="email-link" href={'mailto:' + email}>
+                    {email}
+                  </a>
                 </div>
               );
             })
           : ''}
         {this.props.official.phones
           ? this.props.official.phones.map(phone => {
-              return <div className="phone">{phone}</div>;
+              return (
+                <div className="phone">
+                  <span className="phone-link">{phone}</span>
+                </div>
+              );
             })
           : ''}
       </div>

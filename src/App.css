@@ -159,7 +159,31 @@ input[type='text']:focus {
 img {
   width: 100%;
 }
-
+.email-link {
+  position: relative;
+}
+.email-link:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url('img/email.svg') no-repeat;
+  display: block;
+  position: absolute;
+  left: -24px;
+  top: 2px;
+}
+.phone-link {
+  position: relative;
+}
+.phone-link:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url('img/phone.svg') no-repeat;
+  display: block;
+  position: absolute;
+  left: -24px;
+}
 @keyframes pop {
   0% {
     opacity: 0;
