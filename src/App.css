@@ -2,10 +2,18 @@
 #root {
   font-family: 'Roboto', sans-serif;
 }
+
 body {
   margin: 0 auto;
   /* max-width: 1600px; */
   background: #fcfcfc;
+}
+a {
+  color: #437dff;
+  transition: color 0.1s ease;
+}
+a:hover {
+  color: #6997ff;
 }
 .app {
   padding-bottom: 300px;
@@ -144,6 +152,7 @@ input[type='text']:focus {
   right: 25px;
   top: 10px;
 }
+
 .republican.card-container:after {
   background: url('img/republican.svg') no-repeat;
 }
