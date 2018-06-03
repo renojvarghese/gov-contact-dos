@@ -134,6 +134,22 @@ input[type='text']:focus {
   position: relative;
   background: url('img/empty.svg');
 }
+.card-container:after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  display: block;
+  position: absolute;
+  right: 25px;
+  top: 10px;
+}
+.republican.card-container:after {
+  background: url('img/republican.svg') no-repeat;
+}
+.democrat.card-container:after {
+  background: url('img/democrat.svg') no-repeat;
+}
 .republican .portrait-container {
   background: url('img/star-red.svg');
 }
