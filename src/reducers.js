@@ -1,7 +1,15 @@
-export const reducer = (state = {}, action) => {
+export const reducer = (state = { error: false }, action) => {
   switch (action.type) {
     case 'NEW_STATE':
-      return createOfficerArray(action.data);
+      return {
+        officials: createOfficerArray(action.data),
+        error: false
+      };
+    case 'ERROR':
+      return {
+        officials: [],
+        error: true
+      };
     default:
       return state;
   }

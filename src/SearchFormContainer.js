@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SearchForm } from './SearchForm';
-
+import { PropTypes } from 'prop-types';
 import cred from './config';
 const API_KEY = cred.key;
 
@@ -67,12 +67,14 @@ export class SearchFormContainer extends Component {
     this.loadgapi();
   }
   render() {
+    let error = this.context.store.getState().error;
     return (
       <div className="search-form-container">
         <div className="search-form-instruction">
           <h2 className="search-form-heading">Find Your Representatives</h2>
         </div>
         <SearchForm
+          error={error}
           query={this.state.query}
           handleChange={this.handleChange}
           handleSubmit={this.handleSearch}
@@ -81,3 +83,6 @@ export class SearchFormContainer extends Component {
     );
   }
 }
+SearchFormContainer.contextTypes = {
+  store: PropTypes.object
+};

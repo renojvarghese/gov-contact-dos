@@ -9,13 +9,16 @@ export class SearchForm extends Component {
             type="text"
             onChange={this.props.handleChange}
             name="query"
-            placeholder="Enter your address"
+            placeholder="Enter your zipcode"
             className="search-input"
             id="search"
           />
           <button type="submit" className="submit-btn">
             Submit
           </button>
+          <div className="error-box">
+            {this.props.error ? "Sorry. We cant't find that address." : ' '}
+          </div>
         </form>
       </div>
     );

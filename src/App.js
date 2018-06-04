@@ -20,6 +20,10 @@ class App extends Component {
   }
   getData(res) {
     if (res.error) {
+      this.context.store.dispatch({
+        type: 'ERROR',
+        data: res
+      });
       return this.setState({
         error: true
       });

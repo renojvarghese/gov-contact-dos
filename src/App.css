@@ -100,6 +100,12 @@ input[type='text']:focus {
 .submit-btn:hover {
   background: #6997ff;
 }
+.error-box {
+  color: #b53940;
+  font-size: 12px;
+  margin-top: 15px;
+  min-height: 10px;
+}
 .name {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
