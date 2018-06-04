@@ -39,9 +39,9 @@ export class Official extends Component {
         <div className="name">{this.props.official.name}</div>
         <div className="office-name">{this.props.official.officeName}</div>
         {this.props.official.emails
-          ? this.props.official.emails.map(email => {
+          ? this.props.official.emails.map((email, i) => {
               return (
-                <div className="email">
+                <div className="email" key={'email_' + i}>
                   <a className="email-link" href={'mailto:' + email}>
                     {email}
                   </a>
@@ -50,9 +50,9 @@ export class Official extends Component {
             })
           : ''}
         {this.props.official.phones
-          ? this.props.official.phones.map(phone => {
+          ? this.props.official.phones.map((phone, i) => {
               return (
-                <div className="phone">
+                <div className="phone" key={'phone_' + i}>
                   <span className="phone-link">{phone}</span>
                 </div>
               );
