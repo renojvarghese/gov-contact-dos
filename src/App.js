@@ -3,7 +3,6 @@ import './App.css';
 import { SearchFormContainer } from './SearchFormContainer';
 import { OfficialsContainer } from './OfficialsContainer';
 import { PropTypes } from 'prop-types';
-
 class App extends Component {
   constructor(props) {
     super(props);
