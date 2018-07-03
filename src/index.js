@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { reducer } from './reducers';
+import { reducer } from './reducers/reducers';
 import { Provider } from 'react-redux';
 
 const store = createStore(reducer);
