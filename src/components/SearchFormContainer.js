@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { SearchForm } from './SearchForm';
 import { PropTypes } from 'prop-types';
-import cred from './config';
-const API_KEY = cred.key;
+const API_KEY = process.env.API_KEY;
 
 export class SearchFormContainer extends Component {
   constructor(props) {
