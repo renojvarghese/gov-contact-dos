@@ -9,7 +9,7 @@ export class SearchForm extends Component {
             type="text"
             onChange={this.props.handleChange}
             name="query"
-            placeholder="Search by your address"
+            placeholder="Enter your zipcode"
             className="search-input"
             id="search"
           />
