@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { SearchForm } from './SearchForm';
 import { PropTypes } from 'prop-types';
 const API_KEY = process.env.API_KEY;
-
+console.log(API_KEY);
 export class SearchFormContainer extends Component {
   constructor(props) {
     super(props);
