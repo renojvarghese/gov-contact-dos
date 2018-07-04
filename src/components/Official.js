@@ -43,9 +43,9 @@ export class Official extends Component {
                 {official.emails
                     ? official.emails.map((email, i) => {
                           return (
-                              <div className="email" key={"email_" + i}>
+                              <div className="contact email" key={"email_" + i}>
                                   <a
-                                      className="email-link"
+                                      className="contact-link email-link"
                                       href={"mailto:" + email}
                                   >
                                       {email}
@@ -57,8 +57,10 @@ export class Official extends Component {
                 {official.phones
                     ? official.phones.map((phone, i) => {
                           return (
-                              <div className="phone" key={"phone_" + i}>
-                                  <span className="phone-link">{phone}</span>
+                              <div className="contact phone" key={"phone_" + i}>
+                                  <span className="contact-link phone-link">
+                                      {phone}
+                                  </span>
                               </div>
                           );
                       })
@@ -68,11 +70,13 @@ export class Official extends Component {
                           const suffix = channel.type;
                           return (
                               <div
-                                  className={"social " + suffix}
+                                  className={"contact social " + suffix}
                                   key={"social_" + suffix + i}
                               >
                                   <a
-                                      className={"social-link " + suffix}
+                                      className={
+                                          "contact-link social-link " + suffix
+                                      }
                                       href={
                                           socialLinks[channel.type] + channel.id
                                       }

@@ -196,42 +196,41 @@ input[type="text"]:focus {
 img {
     width: 100%;
 }
-.email-link {
+.contact {
+    margin-bottom: 10px;
+}
+.contact-link {
     position: relative;
 }
-.email-link:before {
+.contact-link::before {
     content: "";
     width: 20px;
     height: 20px;
-    background: url("img/email.svg") no-repeat;
     display: block;
     position: absolute;
     left: -24px;
     top: 2px;
 }
-.phone-link {
-    position: relative;
+
+.email-link:before {
+    background: url("img/email.svg") no-repeat;
+    background-size: 100%;
+    top: 2px;
 }
+
 .phone-link:before {
-    content: "";
-    width: 20px;
-    height: 20px;
     background: url("img/phone.svg") no-repeat;
-    display: block;
-    position: absolute;
-    left: -24px;
+    background-size: contain;
 }
 .social-link {
     font-size: 12px;
-    position: relative;
 }
 .social-link::before {
     content: "";
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     display: block;
     position: absolute;
-
     left: -18px;
     top: 2px;
 }
@@ -250,6 +249,7 @@ img {
 .social-link.YouTube::before {
     background: url("img/youtube.png") no-repeat;
     background-size: 100%;
+    top: 5px;
 }
 @keyframes pop {
     0% {
