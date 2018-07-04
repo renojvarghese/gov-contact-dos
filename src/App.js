@@ -1,59 +1,53 @@
-import React, { Component } from 'react';
-import './App.css';
-import { SearchFormContainer } from './components/SearchFormContainer';
-import { OfficialsContainer } from './components/OfficialsContainer';
-import { PropTypes } from 'prop-types';
+import React, { Component } from "react";
+import "./App.css";
+import { SearchFormContainer } from "./components/SearchFormContainer";
+import { OfficialsContainer } from "./components/OfficialsContainer";
+import { Header } from "./components/Header";
+import { PropTypes } from "prop-types";
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.getData = this.getData.bind(this);
-    this.state = {
-      res: null,
-      error: false
-    };
-  }
-  getData(res) {
-    if (res.error) {
-      this.context.store.dispatch({
-        type: 'ERROR',
-        data: res
-      });
-      return this.setState({
-        error: true
-      });
+    constructor(props) {
+        super(props);
+        this.getData = this.getData.bind(this);
+        this.state = {
+            res: null,
+            error: false
+        };
     }
-    this.context.store.dispatch({
-      type: 'NEW_STATE',
-      data: res
-    });
-    this.setState({
-      data: true
-    });
-  }
-  render() {
-    const data = this.state.res;
-    return (
-      <div className="app">
-        <header className="app-header">
-          <h1 className="app-title">Government Contact</h1>
+    getData(res) {
+        if (res.error) {
+            this.context.store.dispatch({
+                type: "ERROR",
+                data: res
+            });
+            return this.setState({
+                error: true
+            });
+        }
+        this.context.store.dispatch({
+            type: "NEW_STATE",
+            data: res
+        });
+        this.setState({
+            data: true
+        });
+    }
+    render() {
+        const data = this.state.res;
+        return (
+            <div className="app">
+                <Header />
+                <SearchFormContainer handleData={this.getData} />
 
-          <p className="app-desc">
-            Search for the people who serve you. Take action, and contact them
-            over issues you care about
-          </p>
-          <div className="img-container logo-img">
-            <img className="pop-up" src="img/logo.svg" alt="gov-contact logo" />
-          </div>
-        </header>
-
-        <SearchFormContainer handleData={this.getData} />
-
-        {this.state.data ? <OfficialsContainer store={this.props.store} /> : ''}
-      </div>
-    );
-  }
+                {this.state.data ? (
+                    <OfficialsContainer store={this.props.store} />
+                ) : (
+                    ""
+                )}
+            </div>
+        );
+    }
 }
 App.contextTypes = {
-  store: PropTypes.object
+    store: PropTypes.object
 };
 export default App;
