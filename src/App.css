@@ -1,234 +1,268 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:700|Roboto');
+@import url("https://fonts.googleapis.com/css?family=Lato:700|Roboto");
 #root {
-  font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
-  margin: 0 auto;
-  /* max-width: 1600px; */
-  background: #fcfcfc;
+    margin: 0 auto;
+    background: #fcfcfc;
 }
 a {
-  color: #437dff;
-  transition: color 0.1s ease;
+    color: #437dff;
+    transition: color 0.1s ease;
 }
 a:hover {
-  color: #6997ff;
+    color: #6997ff;
 }
 .app {
-  padding-bottom: 300px;
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 .app-header {
-  position: relative;
-  background: url('img/congress.svg') #b4cbff no-repeat;
-  background-size: auto 95%;
-  background-position: bottom left;
-  padding: 75px 20px 0px;
+    position: relative;
+    background: url("img/congress.svg") #b4cbff no-repeat;
+    background-size: auto 95%;
+    background-position: bottom left;
+    padding: 75px 20px 200px;
 }
 .app-title {
-  text-align: center;
-  color: white;
-  font-family: 'Lato', sans-serif;
-  margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-family: "Lato", sans-serif;
+    margin: 0 auto;
 }
 .app-desc {
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  padding: 40px 20px 0px;
-  text-align: center;
-  max-width: 480px;
-  margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    padding: 40px 20px 0px;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
 }
 .logo-img {
-  max-width: 160px;
-  margin: 0 auto;
-  position: relative;
-  bottom: -50px;
+    max-width: 120px;
+    min-width: 40px;
+    width: 10vw;
+    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 .logo-img img {
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .search-form-container {
-  background: #eee;
-  padding: 100px 20px 40px;
-  text-align: center;
+    background: #eee;
+    padding: 40px 20px 40px;
+    text-align: center;
 }
 .search-form-heading {
-  margin-bottom: 30px;
-  color: #b53940;
+    margin-bottom: 30px;
+    color: #b53940;
 }
-input[type='text'] {
-  width: 260px;
-  height: 35px;
-  position: relative;
-  bottom: 0;
-  outline: none;
-  border: none;
-  padding-left: 20px;
-  font-size: 16px;
-  border: 2px solid rgba(0, 0, 0, 0);
-  border-bottom: 2px solid #f24c55;
-  background: none;
-  transition: all 0.2s ease;
+input[type="text"] {
+    width: 260px;
+    height: 35px;
+    position: relative;
+    bottom: 0;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: 16px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-bottom: 2px solid #f24c55;
+    background: none;
+    transition: all 0.2s ease;
 }
-input[type='text']:focus {
-  bottom: 3px;
-  border: 2px solid #f24c55;
+input[type="text"]:focus {
+    bottom: 3px;
+    border: 2px solid #f24c55;
 }
 
 .submit-btn {
-  outline: none;
-  border: none;
-  color: white;
-  background: #437dff;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  padding: 13px 55px;
-  border-radius: 3px;
-  margin-top: 80px;
-  width: 280px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  transition: background 0.2s ease;
+    outline: none;
+    border: none;
+    color: white;
+    background: #437dff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    padding: 13px 55px;
+    border-radius: 3px;
+    margin-top: 80px;
+    width: 280px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s ease;
 }
 @media screen and (min-width: 500px) {
-  .submit-btn {
-    margin-left: 30px;
-    margin-top: 0px;
-    width: auto;
-  }
+    .submit-btn {
+        margin-left: 30px;
+        margin-top: 0px;
+        width: auto;
+    }
 }
 .submit-btn:hover {
-  background: #6997ff;
+    background: #6997ff;
 }
 .error-box {
-  color: #b53940;
-  font-size: 12px;
-  margin-top: 15px;
-  min-height: 10px;
+    color: #b53940;
+    font-size: 12px;
+    margin-top: 15px;
+    min-height: 10px;
 }
 .name {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  margin: 20px 0px 10px;
-  font-size: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    margin: 20px 0px 10px;
+    font-size: 20px;
 }
 .office-name,
 .email,
 .phone {
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    margin-bottom: 10px;
 }
 .office-name {
-  font-size: 16px;
-  margin-bottom: 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .officials-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
-  margin-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    margin-top: 75px;
 }
 .card-container {
-  text-align: center;
-  min-height: 210px;
-  vertical-align: middle;
-  width: 240px;
-  margin: 10px 30px;
-  background: #f5f5f5;
-  padding: 40px 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-height: 210px;
+    vertical-align: middle;
+    width: 240px;
+    margin: 10px 30px;
+    background: #f5f5f5;
+    padding: 40px 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .portrait-container {
-  max-width: 100px;
-  height: 100px;
-  overflow: hidden;
-  border-radius: 100%;
-  margin: 0 auto;
-  position: relative;
-  background: url('img/empty.svg');
+    max-width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: url("img/empty.svg");
 }
 .card-container:after {
-  content: '';
-  width: 50px;
-  height: 50px;
-  z-index: 2;
-  display: block;
-  position: absolute;
-  right: 60px;
-  top: 100px;
+    content: "";
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    display: block;
+    position: absolute;
+    right: 60px;
+    top: 100px;
 }
 
 .republican.card-container:after {
-  background: url('img/republican.svg') no-repeat;
+    background: url("img/republican.svg") no-repeat;
 }
 .democrat.card-container:after {
-  background: url('img/democrat.svg') no-repeat;
+    background: url("img/democrat.svg") no-repeat;
 }
 .republican .portrait-container {
-  background: url('img/star-red.svg');
+    background: url("img/star-red.svg");
 }
 .democrat .portrait-container {
-  background: url('img/star-blue.svg');
+    background: url("img/star-blue.svg");
 }
 .img-container {
-  transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .republican .img-container {
-  border-color: red;
+    border-color: red;
 }
 .democrat .img-container {
-  border-color: blue;
+    border-color: blue;
 }
 .img-container.loading {
-  opacity: 0;
+    opacity: 0;
 }
 .img-container.loaded {
-  opacity: 1;
+    opacity: 1;
 }
 
 img {
-  width: 100%;
+    width: 100%;
 }
 .email-link {
-  position: relative;
+    position: relative;
 }
 .email-link:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background: url('img/email.svg') no-repeat;
-  display: block;
-  position: absolute;
-  left: -24px;
-  top: 2px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("img/email.svg") no-repeat;
+    display: block;
+    position: absolute;
+    left: -24px;
+    top: 2px;
 }
 .phone-link {
-  position: relative;
+    position: relative;
 }
 .phone-link:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background: url('img/phone.svg') no-repeat;
-  display: block;
-  position: absolute;
-  left: -24px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("img/phone.svg") no-repeat;
+    display: block;
+    position: absolute;
+    left: -24px;
+}
+.social-link {
+    font-size: 12px;
+    position: relative;
+}
+.social-link::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    display: block;
+    position: absolute;
+
+    left: -18px;
+    top: 2px;
+}
+.social-link.Facebook::before {
+    background: url("img/facebook.png") no-repeat;
+    background-size: 100%;
+}
+.social-link.Twitter::before {
+    background: url("img/twitter.png") no-repeat;
+    background-size: 100%;
+}
+.social-link.Instagram::before {
+    background: url("img/instagram.png") no-repeat;
+    background-size: 100%;
+}
+.social-link.YouTube::before {
+    background: url("img/youtube.png") no-repeat;
+    background-size: 100%;
 }
 @keyframes pop {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        bottom: 0;
+    }
 }
 .pop-up {
-  position: relative;
-  opacity: 0;
-  bottom: -80px;
-  animation: pop forwards 0.4s ease-out;
+    position: relative;
+    opacity: 0;
+    bottom: -80px;
+    animation: pop forwards 0.4s ease-out;
 }
