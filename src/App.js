@@ -12,11 +12,6 @@ class App extends Component {
       error: false
     };
   }
-  componentDidMount() {
-    this.unsubscribe = this.context.store.subscribe(() => {
-      this.forceUpdate();
-    });
-  }
   getData(res) {
     if (res.error) {
       this.context.store.dispatch({
