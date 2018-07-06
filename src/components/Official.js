@@ -35,6 +35,7 @@ export class Official extends Component {
                             src={this.props.official.photoUrl}
                             onLoad={this.handleImageLoaded.bind(this)}
                             onError={this.handleImageErrored.bind(this)}
+                            alt={"portrait of" + official.name}
                         />
                     </div>
                 </div>
