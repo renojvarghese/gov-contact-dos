@@ -1,38 +1,41 @@
 import React, { Component } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export class SearchForm extends Component {
     render() {
+        let query = "";
         return (
             <section id="search-form">
                 <form
                     className="search-form"
-                    onSubmit={this.props.handleSubmit}
+                    onSubmit={e => {
+                        e.preventDefault();
+                        this.props.onSubmit(query);
+                    }}
                 >
                     <label className="visuallyhidden" htmlFor="search">
                         Enter address
                     </label>
                     <input
                         type="text"
-                        onChange={this.props.handleChange}
+                        onChange={input => {
+                            query = input.target.value;
+                        }}
                         name="address"
                         placeholder="Enter your zipcode"
                         className="search-input"
                         id="search"
                     />
 
-                    <AnchorLink href="#officials-results">
-                        <button
-                            type="submit"
-                            className="submit-btn"
-                            name="search-by-address"
-                        >
-                            Submit
-                        </button>
-                    </AnchorLink>
+                    <button
+                        type="submit"
+                        className="submit-btn"
+                        name="search-by-address"
+                    >
+                        Submit
+                    </button>
                     <div className="error-box">
                         {this.props.error
-                            ? "Sorry. We cant't find that address."
+                            ? "Sorry. Something went wrong. Please double check the address"
                             : " "}
                     </div>
                 </form>
