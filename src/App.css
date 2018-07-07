@@ -195,11 +195,8 @@ input[type="text"]:focus {
 .democrat .img-container {
     border-color: blue;
 }
-.img-container.loading {
-    opacity: 0;
-}
-.img-container.loaded {
-    opacity: 1;
+.img-container img {
+    transition: all 0.5 ease;
 }
 
 img {
