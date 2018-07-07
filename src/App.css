@@ -33,7 +33,12 @@ a:hover {
     background: url("img/congress.svg") #b4cbff no-repeat;
     background-size: auto 95%;
     background-position: bottom left;
-    padding: 75px 20px 200px;
+    padding: 33px 20px 50px;
+}
+@media screen and (min-width: 550px) {
+    .app-header {
+        padding: 75px 20px 100px;
+    }
 }
 .app-title {
     text-align: center;
@@ -63,8 +68,13 @@ a:hover {
 }
 .search-form-container {
     background: #eee;
-    padding: 40px 20px 40px;
+    padding: 15px 8px 15px;
     text-align: center;
+}
+@media screen and (min-width: 550px) {
+    .search-form-container {
+        padding: 40px 20px 40px;
+    }
 }
 .search-form-heading {
     margin-bottom: 30px;
@@ -98,7 +108,7 @@ input[type="text"]:focus {
     font-size: 16px;
     padding: 13px 55px;
     border-radius: 3px;
-    margin-top: 80px;
+    margin-top: 30px;
     width: 280px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     transition: background 0.2s ease;
@@ -142,7 +152,12 @@ input[type="text"]:focus {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
-    margin-top: 75px;
+    padding-top: 15px;
+}
+@media screen and (min-width: 550px) {
+    .officials-container {
+        padding-top: 75px;
+    }
 }
 .card-container {
     text-align: center;
