@@ -20,7 +20,7 @@ export const reducer = (
 
 const createOfficerArray = data => {
     let offices = data.offices;
-    if (!offices) return {};
+    if (!offices) return [];
     let officials = [];
     offices.map(office => {
         return office.officialIndices.map(officialIndex => {

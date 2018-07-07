@@ -28,11 +28,22 @@ const mapDispatchToProps = dispatch => {
     return {
         onSubmit: query => {
             fetch(url + query)
-                .then(response => response.json())
                 .then(response => {
+                    if (!response.ok) {
+                        throw Error(response.statusText);
+                    } else {
+                        return response.json();
+                    }
+                })
+                .then(json => {
                     dispatch({
                         type: "NEW_OFFICIALS",
-                        data: response
+                        data: json
+                    });
+                })
+                .catch(err => {
+                    dispatch({
+                        type: "ERROR"
                     });
                 });
         }
