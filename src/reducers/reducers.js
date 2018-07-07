@@ -1,32 +1,35 @@
-export const reducer = (state = { error: false }, action) => {
-  switch (action.type) {
-    case 'NEW_STATE':
-      return {
-        officials: createOfficerArray(action.data),
-        error: false
-      };
-    case 'ERROR':
-      return {
-        officials: [],
-        error: true
-      };
-    default:
-      return state;
-  }
+export const reducer = (
+    state = { error: false, officials: [] },
+    action = {}
+) => {
+    switch (action.type) {
+        case "NEW_OFFICIALS":
+            return {
+                officials: createOfficerArray(action.data),
+                error: false
+            };
+        case "ERROR":
+            return {
+                officials: [],
+                error: true
+            };
+        default:
+            return state;
+    }
 };
 
 const createOfficerArray = data => {
-  let offices = data.offices;
-  if (!offices) return {};
-  let officials = [];
-  offices.map(office => {
-    return office.officialIndices.map(officialIndex => {
-      let myofficial = {
-        ...data.officials[officialIndex],
-        officeName: office.name
-      };
-      officials.push(myofficial);
+    let offices = data.offices;
+    if (!offices) return {};
+    let officials = [];
+    offices.map(office => {
+        return office.officialIndices.map(officialIndex => {
+            let myofficial = {
+                ...data.officials[officialIndex],
+                officeName: office.name
+            };
+            officials.push(myofficial);
+        });
     });
-  });
-  return officials.slice(2);
+    return officials.slice(2);
 };
