@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import $ from "jquery";
 export class SearchForm extends Component {
     render() {
         let query = "";
@@ -10,12 +9,6 @@ export class SearchForm extends Component {
                     onSubmit={e => {
                         e.preventDefault();
                         this.props.onSubmit(query);
-                        $("html, body").animate(
-                            {
-                                scrollTop: $("#results").offset().top
-                            },
-                            1000
-                        );
                     }}
                 >
                     <label className="visuallyhidden" htmlFor="search">

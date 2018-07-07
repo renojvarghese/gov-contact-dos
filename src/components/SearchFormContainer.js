@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { SearchForm } from "./SearchForm";
 import { connect } from "react-redux";
+import { scroller } from "react-scroll";
 const API_KEY = process.env.REACT_APP_API_KEY;
 const url =
     "https://www.googleapis.com/civicinfo/v2/representatives?key=" +
@@ -39,6 +40,12 @@ const mapDispatchToProps = dispatch => {
                     dispatch({
                         type: "NEW_OFFICIALS",
                         data: json
+                    });
+                    scroller.scrollTo("results", {
+                        duration: 1500,
+                        delay: 50,
+                        smooth: true,
+                        offset: -200
                     });
                 })
                 .catch(err => {
