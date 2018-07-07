@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:700|Roboto");
-#root {
-    font-family: "Roboto", sans-serif;
-}
+
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -15,6 +13,7 @@
 body {
     margin: 0 auto;
     background: #fcfcfc;
+    font-family: "Roboto", sans-serif;
 }
 a {
     color: #437dff;
