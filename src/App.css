@@ -44,6 +44,7 @@ a:hover {
     color: white;
     font-family: "Lato", sans-serif;
     margin: 0 auto;
+    margin-top: 30px;
 }
 .app-desc {
     font-family: "Roboto", sans-serif;
@@ -191,13 +192,13 @@ input[type="text"]:focus {
 .republican.card-container:after {
     background: url("img/republican.svg") no-repeat;
 }
-.democrat.card-container:after {
+.democratic.card-container:after {
     background: url("img/democrat.svg") no-repeat;
 }
 .republican .portrait-container {
     background: url("img/star-red.svg");
 }
-.democrat .portrait-container {
+.democratic .portrait-container {
     background: url("img/star-blue.svg");
 }
 .img-container {
