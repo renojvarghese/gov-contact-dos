@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import CrossfadeImage from "react-crossfade-image";
 
@@ -18,8 +18,12 @@ export const Official = ({ official }) => {
             }
         >
             <div className="portrait-container">
-                <div className={"img-container "}>
-                    <CrossfadeImage src={official.photoUrl} />
+                <div className="img-container ">
+                    {official.photoUrl ? (
+                        <CrossfadeImage src={official.photoUrl} />
+                    ) : (
+                        ""
+                    )}
                 </div>
             </div>
             <div className="name">{official.name}</div>

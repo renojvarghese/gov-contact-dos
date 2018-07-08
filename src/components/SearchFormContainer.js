@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { SearchForm } from "./SearchForm";
 import { connect } from "react-redux";
 import { scroller } from "react-scroll";
