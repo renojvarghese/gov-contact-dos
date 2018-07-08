@@ -20,7 +20,7 @@ export class SearchForm extends Component {
                             query = input.target.value;
                         }}
                         name="address"
-                        placeholder="Enter your zipcode"
+                        placeholder="Enter your address"
                         className="search-input"
                         id="search"
                     />
